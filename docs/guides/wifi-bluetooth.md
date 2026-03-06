@@ -16,6 +16,9 @@ This page is a step by step guide to get Wi-Fi and Bluetooth working on T2 Macs,
 !!! Warning "NixOS"
     NixOS users please first read the [distribution specific guide on firmware](../distributions/nixos/installation.md#wi-fi-and-bluetooth-setup) before following instructions on this page.
 
+!!! Warning "`kdeconnectd` scans may harm Bluetooth throughput, notably audio streaming"
+    If you use KDE Plasma or KDE Connect, and you observe periodic drops in Bluetooth performance (i.e. A2DP audio stuttering on Bluetooth peripherals), try uninstalling the `kdeconnect` and/or `kdeconnectd` package according to your distro, then `killall kdeconnectd`; or disable it by other means.
+
 ## Setting up
 
 We now use a script which can help you set up Wi-Fi and Bluetooth. Click [here](../tools/firmware.sh) to download the script.
